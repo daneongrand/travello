@@ -1,0 +1,28 @@
+.main-header
+    position: absolute
+    min-width: 1046px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 30px
+    z-index: 1
+    &-logo
+        img
+            width: 21px
+            height: 30px
+        span
+            text-transform: uppercase
+            color: $green
+            font-weight: 600
+            font-size: 30px
+            line-height: 30px
+    &-navigation
+        width: 529px
+        display: flex
+        justify-content: space-between
+        a
+            text-decoration: none
+            @include small-text(#000)
+            transition: .3s
+            &:hover
+                color: $green

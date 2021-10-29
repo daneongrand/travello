@@ -1,0 +1,124 @@
+.offer-section
+    width: 1320px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-header
+        width: 1050px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &-title
+            height: 96px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            p
+                @include small-text (#000)
+            h2
+                @include h2 ($darkblue)
+        button
+            @include button (15px, 20px, 15px, normal, 198px)
+    &-wrapper
+        
+        &-buttons
+            #prev-button, #next-button
+                cursor: pointer
+                width: 45px
+                height: 45px
+                border-radius: 50%
+                border: 0px
+                color: #fff
+                background-color: $green
+                box-shadow: 0px 15px 25px rgba(0, 157, 152, 0.3)
+    &-carousel-container
+        &-content
+            width: 1320px
+            display: flex
+            overflow: hidden
+            padding: 0
+            &-item
+                height: 566px
+                min-width: 420px
+                box-sizing: border-box
+                display: flex
+                flex-direction: column
+                transition: .4s
+                &-image
+                    width: 420px
+                    height: 420px
+                    border-radius: 20px
+                    position: relative
+                    margin-bottom: 30px
+                    span
+                        position: absolute
+                        width: 133px
+                        height: 52px
+                        background-color: $yellow
+                        border-radius: 4px 10px
+                        box-sizing: border-box
+                        left: 30px
+                        bottom: 30px
+                        padding: 15px 30px
+                        transition: .4s
+                        opacity: 0
+                        &:hover
+                            box-shadow: 0 0 15px 5px $yellow
+                        a
+                            text-decoration: none
+                            font-weight: 600
+                            color: #fff
+                            font-size: 16px
+                &-title
+                    display: flex
+                    justify-content: space-between
+                    padding: 0px 30px
+                    margin-bottom: 10px
+                    h3
+                        @include h3 ($darkblue)
+                &-country
+                    display: flex
+                    justify-content: space-between
+                    padding: 0px 30px
+                    margin-bottom: 20px
+                    @include small-text ($gray)
+                &-info
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    padding: 0px 30px
+                    &-details
+                        display: flex
+                        min-width: 148px
+                        justify-content: space-between
+                        align-items: center
+                        @include small-text ($green)
+                        &-people
+                            min-width: 35px
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                        &-time
+                            min-width: 83px
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                        img 
+                            width: 16px
+                            height: 16px
+                    &-price
+                        font-size: 24px
+                        font-weight: 600
+                        color: $green
+                
+                &:hover
+                    .offer-section-carousel-container-content-item-image
+                        span
+                            opacity: 1
+                            
+
+
+                        
+                
+                            
+                        

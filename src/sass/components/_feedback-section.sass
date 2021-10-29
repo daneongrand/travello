@@ -1,0 +1,44 @@
+.feedback-section
+    width: 100%
+    height: 718px
+    background: url("../../img/feedback-background.jpg") no-repeat center /cover
+    &-overlay
+        height: 100%
+        background: rgba(8, 60, 76, 0.5)
+        display: flex
+        justify-content: center
+        align-items: center
+        div
+            min-width: 510px
+            h2
+                @include h2 (#fff)
+                margin-bottom: 30px
+            p
+                @include small-text (#fff)
+        form
+            display: flex
+            flex-direction: column
+            min-width: 450px
+            height: 518px
+            justify-content: space-between
+            label
+                display: flex
+                flex-direction: column
+                @include small-text(#fff)
+            input[type="text"], input[type="email"], textarea
+                background: rgba(0, 0, 0, 0.5)
+                box-shadow: 0px 10px 50px rgba(19, 15, 64, 0.1)
+                border: 0
+                border-radius: 4px
+                color: #fff
+                &:focus
+                    outline: none
+                    background: #fff
+                    color: #000
+            textarea 
+                height: 120px
+                resize: none
+            input[type="text"], input[type="email"]
+                height: 46px
+            input[type="button"]
+                @include button(10px, 50px, 10px, 600, 141px)

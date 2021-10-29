@@ -1,0 +1,34 @@
+.main-footer
+    width: 100%
+    height: 911px
+    background: url('../../img/footer-background.png') no-repeat bottom /100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    &-links
+        width: 1050px
+        height: 181px
+        display: flex
+        justify-content: space-between
+        ul
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            li:first-child
+                margin-bottom: 30px
+            li
+                list-style-type: none
+                p
+                    @include small-text (#fff)
+                h4
+                    @include h4 (#fff)
+        ul:last-child
+            width: 330px
+            height: 50%
+    &-rights
+        width: 1050px
+        border-top: 1px solid #fff
+        @include small-text (#fff)
+        text-align: center
+        padding: 30px 0
