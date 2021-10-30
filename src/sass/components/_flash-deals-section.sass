@@ -1,0 +1,50 @@
+.flash-deals-section
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-header
+        max-width: 1050px
+        display: flex
+        justify-content: space-between
+        h2
+            @include h2 ($darkblue)
+        button 
+            @include button (12px, 20px, 12px, normal, 168px)
+    &-wrapper   
+        max-width: 1440px
+        &-container
+            width: 100%
+            &-track
+                overflow: hidden
+                display: flex        
+                &-item
+                    min-width: 330px
+                    margin-left: 30px
+                    list-style-type: none
+                    &-img
+                        margin-bottom: 30px
+                        border-radius: 8px
+
+                    &-timer
+                        display: flex
+                        justify-content: space-between
+                        max-width: 135px
+                        margin-bottom: 23px
+                        h4
+                            @include h4 (#000)
+                    &-title
+                        margin-bottom: 20px
+                        max-width: 216px
+                        h4 
+                            @include h4 (#000)
+                    &-info
+                        margin-bottom: 30px
+                        p
+                            @include small-text ($gray)
+                    &-price
+                        color: $green
+                        font-size: 36px
+                        font-weight: 600
+                    &:first-child
+                        margin-left: 0 

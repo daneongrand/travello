@@ -1,10 +1,10 @@
 .offer-section
-    width: 1320px
+    max-width: 1320px
     display: flex
     flex-direction: column
     align-items: center
     &-header
-        width: 1050px
+        max-width: 1050px
         display: flex
         justify-content: space-between
         align-items: center
@@ -33,7 +33,7 @@
                 box-shadow: 0px 15px 25px rgba(0, 157, 152, 0.3)
     &-carousel-container
         &-content
-            width: 1320px
+            max-width: 1320px
             display: flex
             overflow: hidden
             padding: 0
@@ -43,13 +43,16 @@
                 box-sizing: border-box
                 display: flex
                 flex-direction: column
-                transition: .4s
+                margin-left: 30px
+                &:first-child
+                    margin-left: 0px
                 &-image
                     width: 420px
                     height: 420px
                     border-radius: 20px
                     position: relative
                     margin-bottom: 30px
+                    border-radius: 20px
                     span
                         position: absolute
                         width: 133px
