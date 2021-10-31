@@ -1,13 +1,14 @@
 .main-header
-    position: absolute
-    max-width: 1046px
-    
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin-top: 30px
-    z-index: 1
+    width: 100%
+    display: grid
+    grid-template-columns: minmax(0px, 100px) minmax(171px, 1fr) minmax(529px, 1fr) minmax(0px, 100px)
+    grid-template-rows: 10vh 90vh
+    background: url('../../img/backgroungFirstSection.png') no-repeat bottom /cover
+
     &-logo
+        grid-column-start: 2
+        display: flex
+        align-items: center
         img
             width: 21px
             height: 30px
@@ -17,9 +18,12 @@
             font-weight: 600
             font-size: 30px
             line-height: 30px
+    
     &-navigation
-        width: 529px
+        grid-column-start: 3
         display: flex
+        width: 100%
+        align-items: center
         justify-content: space-between
         a
             text-decoration: none
@@ -27,3 +31,118 @@
             transition: .3s
             &:hover
                 color: $green
+
+    h1
+        align-self: start
+        max-width: 495px
+        padding-top: 161px
+        grid-area: 2/2/2/4
+        font-family: $secondary-font
+        font-weight: 900
+        font-size: 75px
+        line-height: 85px
+        letter-spacing: 0.05em
+        color: transparent
+        -webkit-text-stroke-color: #000
+        -webkit-text-stroke-width: 1px
+
+    &-hamburger
+        display: none
+
+
+@media screen and (max-width: 1000px)
+    #main-header-hamburger-toggle
+        opacity: 0
+        &:checked ~ .main-header-hamburger-navigation
+            top: 0
+        &:checked ~ .main-header-hamburger-button > span::before
+            top: 0
+            transform: rotate(0)
+        
+        &:checked ~ .main-header-hamburger-button > span::after
+            top: 0
+            transform: rotate(90deg)
+        
+        &:checked ~ .main-header-hamburger-button > span
+            transform: rotate(45deg)
+        
+            
+
+    
+    .main-header
+        grid-template-columns: minmax(0px, 50px) 1fr 1fr minmax(0px, 50px)
+        grid-template-rows: 10vh 90vh
+        &-hamburger
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            grid-column-start: 3
+            grid-row-start: 1
+            &-navigation
+                position: absolute
+                width: 100%
+                background-color: red
+                height: 50vh
+                left: 0
+                top: -100%
+                transition: .3s
+                display: flex
+                justify-content: space-around
+                flex-direction: column
+                align-items: center
+                background: rgba(255, 255, 255, 0.1)
+                backdrop-filter: blur(15px)
+                a
+                    text-decoration: none
+                    @include small-text(#000)
+                    transition: .3s
+                    &:hover
+                        color: $green
+            &-button
+                cursor: pointer
+                position: absolute
+                display: flex
+                align-items: center
+                width: 30px 
+                height: 30px
+                z-index: 1
+                & > span
+                    display: block
+                    position: absolute
+                    width: 100%
+                    height: 3px
+                    background-color: black
+                    transition: .3s
+            
+                & > span::before
+                    content: ''
+                    top: -10px
+                    display: block
+                    position: absolute
+                    width: 100%
+                    height: 3px
+                    background-color: black
+                    transition: .3s
+
+                & > span::after
+                    content: ''
+                    display: block
+                    top: 10px
+                    position: absolute
+                    width: 100%
+                    height: 3px
+                    background-color: black
+                    transition: .3s
+
+        &-navigation
+            display: none   
+        &-logo
+            grid-column-start: 2
+            grid-row-start: 1
+        h1
+            grid-area: 2/2/2/4
+            justify-self: center
+            padding-top: 10px
+
+
+// @media screen and (max-width: 1000px)

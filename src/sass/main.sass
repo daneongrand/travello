@@ -4,8 +4,8 @@
 @import 'variables'
 @import 'mixins'
 @import './components/headers'
-@import './components/explore-section'
-@import './components/post-section'
+@import './components/form-travel'
+@import './components/post'
 @import './components/offer-section'
 @import './components/_flash-deals-section'
 @import './components/feedback-section'
@@ -17,9 +17,9 @@ h1, h2, h3, h4, p
     padding: 0
     
 body
+    display: grid
+    justify-content: center
+    grid-template-columns: 1fr
     font-family: $primary-font
-    display: flex
-    flex-direction: column
-    align-items: center
     width: 100%
     background: $background-color
